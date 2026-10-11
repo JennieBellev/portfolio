@@ -1,0 +1,1 @@
+:root{--bg-color: #f8f9fa;--text-primary: #2f4f4f;--accent-teal: #008080;--nav-bg: #1a2525}body{margin:0;font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;background-color:var(--bg-color);color:var(--text-primary)}a{color:var(--accent-teal);text-decoration:none;font-weight:700}a:hover{text-decoration:underline}
