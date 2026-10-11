@@ -1,14 +1,10 @@
-<header style="background-color: var(--nav-bg); padding: 1rem;">
-  <nav style="display: flex; gap: 20px; justify-content: center;">
-    <!-- routerLink is Angular's magic version of href -->
-    <a routerLink="/" style="color: white;">Home</a>
-    <a routerLink="/about" style="color: white;">About</a>
-    <a routerLink="/resume" style="color: white;">Resume</a>
-    <a routerLink="/projects" style="color: white;">Projects</a>
-  </nav>
-</header>
+<nav style="padding: 20px; background: #eee; text-align: center;">
+  <a routerLink="/">Home</a> |
+  <a routerLink="/about">About</a> |
+  <a routerLink="/resume">Resume</a> |
+  <a routerLink="/projects">Projects</a>
+</nav>
 
-<main style="padding: 2rem; max-width: 1200px; margin: 0 auto;">
-  <!-- router-outlet is the designated dropping zone for your page components -->
+<main style="padding: 20px; max-width: 800px; margin: 0 auto;">
   <router-outlet></router-outlet>
 </main>
