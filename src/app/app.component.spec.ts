@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
@@ -7,7 +8,7 @@ describe('AppComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent]
+      imports: [AppComponent, RouterTestingModule]
     }).compileComponents();
 
     fixture = TestBed.createComponent(AppComponent);
@@ -19,21 +20,10 @@ describe('AppComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('renders the replaceable student name', () => {
+  it('renders the site navigation and routed page outlet', () => {
     const page = fixture.nativeElement as HTMLElement;
 
-    expect(page.querySelector('h1')?.textContent).toContain(component.studentName);
-  });
-
-  it('renders every skill from the component data', () => {
-    const skillItems = fixture.nativeElement.querySelectorAll('.skill-list li');
-
-    expect(skillItems.length).toBe(component.skills.length);
-  });
-
-  it('renders every project from the component data', () => {
-    const projectCards = fixture.nativeElement.querySelectorAll('.project-card');
-
-    expect(projectCards.length).toBe(component.projects.length);
+    expect(page.querySelector('a[routerLink="/projects"]')?.textContent).toContain('Projects');
+    expect(page.querySelector('router-outlet')).toBeTruthy();
   });
 });
